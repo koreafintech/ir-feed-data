@@ -2906,5 +2906,43 @@
         "cost": 0.1266
       }
     ]
+  },
+  {
+    "date": "2026-05-08",
+    "time": "2026-05-08T23:22:33.447721",
+    "total": 4,
+    "success": 4,
+    "failed": 0,
+    "cost": 0.724,
+    "files": [
+      {
+        "company": "LG에너지솔루션",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.1783
+      },
+      {
+        "company": "POSCO홀딩스",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.2412
+      },
+      {
+        "company": "원익IPS",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.1594
+      },
+      {
+        "company": "파크시스템스",
+        "doc_type": "실적발표",
+        "period": "2025-4Q",
+        "status": "ok",
+        "cost": 0.1452
+      }
+    ]
   }
 ]
