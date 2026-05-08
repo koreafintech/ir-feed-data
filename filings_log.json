@@ -3080,5 +3080,29 @@
         "cost": 0.1093
       }
     ]
+  },
+  {
+    "date": "2026-05-09",
+    "time": "2026-05-09T07:21:06.218483",
+    "total": 2,
+    "success": 2,
+    "failed": 0,
+    "cost": 0.3928,
+    "files": [
+      {
+        "company": "셀트리온",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.1883
+      },
+      {
+        "company": "카카오",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.2044
+      }
+    ]
   }
 ]

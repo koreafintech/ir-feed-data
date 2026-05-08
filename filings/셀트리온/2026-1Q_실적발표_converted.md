@@ -3,481 +3,238 @@
 title: "셀트리온 2026년 1분기 실적발표"
 company: "셀트리온"
 doc_type: "실적발표"
-publish_date: "2026-05-06"
 fiscal_year: 2026
 fiscal_quarter: "Q1"
 ticker: ""
 ticker_us: ""
-english_name: ""
+english_name: "Celltrion"
+publish_date: "2026-05-06"
 source: "IRGO"
 pipeline_version: "v2.0.0"
-converted_at: "2024-12-19T00:00:00Z"
+converted_at: "2026-05-06T00:00:00+09:00"
+accounting_standard: "K-IFRS"
+basis: "연결"
 
 key_figures:
   revenue:
     value: "11,450"
     unit: "억원"
     basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "전년 동기(1Q25: 8,419억원) 대비 +36.0% 증가"
-  
-  revenue_qoq:
-    value: "11,450"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26 vs 4Q25"
-    confidence: 0.99
-    note: "4Q25(13,302억원) 대비 -13.9% 감소, 일시적 조업도손 영향"
-  
-  bio_product_revenue:
-    value: "9,742"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "1Q25(7,676억원) 대비 +26.9%, 신규 제품 성장이 견인"
-  
-  new_bio_product_revenue:
+    period: "1Q2026"
+    confidence: 0.98
+    note: "전년 동기(1Q25) 8,419억원 대비 +36.0% YoY, 전분기(4Q25) 13,302억원 대비 -13.9% QoQ"
+
+  revenue_by_segment:
+    bio_products:
+      value: "9,742"
+      unit: "억원"
+      basis: "연결"
+      period: "1Q2026"
+      confidence: 0.98
+      note: "바이오 제품 매출, YoY +26.9%, QoQ -22.2%"
+    non_bio_products:
+      value: "1,708"
+      unit: "억원"
+      basis: "연결"
+      period: "1Q2026"
+      confidence: 0.98
+      note: "Non-바이오 제품 매출, TEVA CMO 매출 발생으로 YoY +129.9%, QoQ +119.3%"
+
+  bio_revenue_new_products:
     value: "5,812"
     unit: "억원"
     basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "신규 제품 매출, 1Q25(3,472억원) 대비 +67.0%, 전체 바이오 제품 매출의 60% 차지"
-  
-  new_launch_5product_revenue:
-    value: "2,113"
+    period: "1Q2026"
+    confidence: 0.98
+    note: "신규 제품 매출, 바이오 제품 내 비중 60%, YoY +67%; 신규 출시 5종(스텔라라, 스토보클로스/스센트라, 엔도조마, 유플리마, 아이덴텔) 합산 매출 2,113억원 포함"
+
+  bio_revenue_existing_products:
+    value: "3,930"
     unit: "억원"
     basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "2025년 출시 5종 제품(렉시정SC, 유뮬림미, 배그정마, 징켈라, 스테미라 등), 1Q25(218억원) 대비 +869.7% 폭증"
-  
-  high_margin_new_product_revenue_increase:
-    value: "2,340"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26 vs 1Q25"
-    confidence: 0.99
-    note: "고수익 신규 제품 매출 증가분"
-  
-  non_bio_product_revenue:
-    value: "1,708"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "1Q25(743억원) 대비 +129.9% 증가, TEVA CMO 매출 발생으로 증가"
-  
+    period: "1Q2026"
+    confidence: 0.97
+    note: "기존 제품 매출, 바이오 제품 내 비중 ~40%; 렉시마(2,136억), 트록시마(1,367억), 혜유마(427억) 포함"
+
   operating_profit:
     value: "3,219"
     unit: "억원"
     basis: "연결"
-    period: "1Q26"
+    period: "1Q2026"
     confidence: 0.98
-    note: "1Q25(1,494억원) 대비 +115.5% 증가. 미국 공장 정기 보수 일시적 조업도손 제거 시 추정값"
-  
-  operating_profit_adjusted:
-    value: "3,219"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26"
-    confidence: 0.85
-    note: "⚠️ 원본 확인 필요: 미국 공장 정기 보수로 인한 일시적 조업도손 제거 후, 실질 영업이익 추정(+0억원)"
-  
-  operating_profit_margin:
-    value: "28.1"
-    unit: "%"
-    basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "1Q25(17.7%) 대비 +10.4%p 개선, 고수익 제품 믹스 개선 및 영업 효율성 제고"
-  
-  operating_profit_qoq:
-    value: "3,219"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26 vs 4Q25"
-    confidence: 0.99
-    note: "4Q25(4,752억원) 대비 -32.3% 감소"
-  
-  operating_profit_margin_normalized:
-    value: "30"
-    unit: "%"
-    basis: "연결"
-    period: "1Q26"
-    confidence: 0.8
-    note: "⚠️ 원본 확인 필요: 미국 공장 정기 보수 제거 시 정상화된 마진 수준(추정)"
+    note: "YoY +115.5% (1Q25: 1,494억원), QoQ -32.3% (4Q25: 4,752억원); 미국 공장 정기 보수 일시적 조업도 손실 포함. 해당 손실 제외 시 영업이익률 30%대"
 
-  # 재무상태 지표 (연결 기준, 단위: 억원)
+  operating_profit_margin:
+    value: "28.1%"
+    unit: "%p"
+    basis: "연결"
+    period: "1Q2026"
+    confidence: 0.98
+    note: "전년 동기 17.7% 대비 +10.4%p 개선, 전분기 35.7% 대비 -7.6%p"
+
   total_assets:
     value: "231,566"
     unit: "억원"
     basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "2025년말(223,349억원) 대비 +3.7% 증가"
-  
+    period: "1Q2026"
+    confidence: 0.98
+    note: "2025년말 223,349억원 대비 증가"
+
   current_assets:
     value: "66,928"
     unit: "억원"
     basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "2025년말(62,053억원) 대비 증가"
-  
+    period: "1Q2026"
+    confidence: 0.98
+
   cash_and_equivalents:
     value: "14,163"
     unit: "억원"
     basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "현금 및 현금성자산 & 단기금융상품, 2025년말(12,367억원) 대비 증가"
-  
+    period: "1Q2026"
+    confidence: 0.98
+    note: "현금 및 현금성자산 + 단기금융상품 합산; 2025년말 12,367억원 대비 증가"
+
   trade_receivables:
     value: "19,096"
     unit: "억원"
     basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "매출채권, 2025년말(17,904억원) 대비 증가"
-  
-  inventory:
+    period: "1Q2026"
+    confidence: 0.98
+
+  inventories:
     value: "28,636"
     unit: "억원"
     basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "재고자산, 2025년말(28,035억원) 대비 소폭 증가"
-  
-  non_current_assets:
-    value: "164,638"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "2025년말(161,296억원) 대비 증가"
-  
+    period: "1Q2026"
+    confidence: 0.98
+    note: "원문 '제조공자'는 '재고자산(제품/재공품)'으로 추정"
+
   intangible_assets:
     value: "140,284"
     unit: "억원"
     basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "무형자산, 2025년말(137,783억원) 대비 증가"
-  
+    period: "1Q2026"
+    confidence: 0.98
+    note: "자산총계 대비 약 60.6%로 비중 높음 — 바이오시밀러 제품권 등 무형자산 비중 반영"
+
   total_liabilities:
     value: "53,423"
     unit: "억원"
     basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "2025년말(49,824억원) 대비 증가"
-  
-  current_liabilities:
-    value: "48,165"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "유동부채, 2025년말(44,538억원) 대비 증가"
-  
-  non_current_liabilities:
-    value: "5,258"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "비유동부채, 2025년말(5,286억원) 대비 소폭 감소"
-  
-  long_term_borrowings:
+    period: "1Q2026"
+    confidence: 0.98
+
+  total_debt:
     value: "38,095"
     unit: "억원"
     basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "장기차입금, 2025년말(36,901억원) 대비 증가"
-  
+    period: "1Q2026"
+    confidence: 0.98
+    note: "장단기차입금 합산; 2025년말 36,901억원 대비 증가"
+
   total_equity:
     value: "178,144"
     unit: "억원"
     basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "자본총계, 2025년말(173,525억원) 대비 +2.7% 증가"
-  
-  capital_stock:
-    value: "2,394"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "자본금"
-  
-  capital_surplus:
-    value: "142,045"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "주식발행초과금, 2025년말(141,901억원) 대비 소폭 증가"
-  
+    period: "1Q2026"
+    confidence: 0.98
+
   retained_earnings:
     value: "45,893"
     unit: "억원"
     basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "이익잉여금, 2025년말(44,071억원) 대비 증가"
-  
-  other_comprehensive_income:
-    value: "5,649"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "기타포괄순이익, 2025년말(3,096억원) 대비 증가"
-  
-  # 주요 지표
+    period: "1Q2026"
+    confidence: 0.98
+
   net_debt:
     value: "23,932"
     unit: "억원"
     basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "Stage 4 교정: 순차입금 = 장기차입금(38,095) - 현금성자산(14,163) = 23,932억원, 2025년말(24,534억원) 대비 감소"
-  
-  debt_to_assets_ratio:
-    value: "23.07"
+    period: "1Q2026"
+    confidence: 0.97
+    note: "순차입금 = 장단기차입금 - 현금성자산(38,095 - 14,163 = 23,932); 2025년말 24,534억원 대비 소폭 감소"
+
+  debt_to_equity_ratio:
+    value: "30.0%"
     unit: "%"
     basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "Stage 4 교정: 부채비율 = 부채총액(53,423)/자산총액(231,566) × 100% = 23.07%, 국내 대기업 평균(약 43%) 대비 낮은 수준, 2025년말(28.7%) 대비 개선"
+    period: "1Q2026"
+    confidence: 0.98
+    note: "부채비율 = 부채총계/자본총계; 한국은행 대기업 평균 대비 낮은 수준 (국내 대기업 평균 약 61%)"
 
-  # 분기별 영업이익 전망
-  operating_profit_2q26_forecast:
-    value: "4,000"
-    unit: "억원 이상"
+  operating_profit_guidance_fy2026:
+    value: "1.8조원 이상"
+    unit: "조원"
     basis: "연결"
-    period: "2Q26(E)"
-    confidence: 0.75
-    note: "전망, 미국 공장 정상 가동에 따른 일시적 영향 해소"
-  
-  operating_profit_3q26_forecast:
-    value: "5,000"
-    unit: "억원 이상"
-    basis: "연결"
-    period: "3Q26(E)"
-    confidence: 0.75
-    note: "전망, 신규 제품 성장 본격화"
-  
-  operating_profit_4q26_forecast:
-    value: "6,000"
-    unit: "억원 이상"
-    basis: "연결"
-    period: "4Q26(E)"
-    confidence: 0.75
-    note: "전망, 하반기 성장 모멘텀"
-  
-  operating_profit_fy26_forecast:
-    value: "18,000"
-    unit: "억원"
-    basis: "연결"
-    period: "FY26(E)"
-    confidence: 0.75
-    note: "연간 영업이익 전망(향간 1.8조원), 분기별 전망의 합계"
+    period: "FY2026(E)"
+    confidence: 0.80
+    note: "추정/가이던스; 2025년 연간 약 1.2조원 대비 +50% 이상 성장 전망. 분기별 가이던스: 2Q26 4,000억 이상, 3Q26 5,000억 이상, 4Q26 6,000억 이상"
 
-  # 바이오 제품 매출 추이
-  bio_revenue_1q24:
-    value: "6,512"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q24"
-    confidence: 0.99
-    note: "기존 제품 4,372억원 + 신규 제품 2,140억원(33%)"
-  
-  bio_revenue_1q25:
-    value: "7,676"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q25"
-    confidence: 0.99
-    note: "기존 제품 4,204억원 + 신규 제품 3,472억원(45%), 1Q24 대비 +18% YoY"
-  
-  bio_revenue_1q26:
-    value: "9,742"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "기존 제품 3,930억원 + 신규 제품 5,812억원(60%), 1Q25 대비 +27% YoY"
-  
-  bio_revenue_fy23:
-    value: "19,712"
-    unit: "억원"
-    basis: "연결"
-    period: "FY23"
-    confidence: 0.99
-    note: "기존 제품 14,638억원(74%) + 신규 제품 5,074억원(26%)"
-  
-  bio_revenue_fy24:
-    value: "31,085"
-    unit: "억원"
-    basis: "연결"
-    period: "FY24"
-    confidence: 0.99
-    note: "기존 제품 19,272억원(62%) + 신규 제품 11,813억원(38%)"
-  
-  bio_revenue_fy25:
-    value: "38,638"
-    unit: "억원"
-    basis: "연결"
-    period: "FY25"
-    confidence: 0.99
-    note: "기존 제품 17,832억원(46%) + 신규 제품 20,806억원(54%)"
-  
-  bio_revenue_fy26_forecast:
-    value: "N/A"
-    unit: "억원"
-    basis: "연결"
-    period: "FY26(E)"
-    confidence: 0.0
-    note: "Stage 4 교정: ⚠️ 원본 확인 필요 - FY25(38,638억원)와 동일로 기재되어 있음. 신규 제품 비중 70% 달성 예상이 명시되어 있으나 정확한 전망값 필요"
-
-  # 주요 제품별 매출
-  remsima_sc_gimtiltra_1q25:
-    value: "1,487"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q25"
-    confidence: 0.99
-    note: "렘시마SC/집멜트라 매출"
-  
-  remsima_sc_gimtiltra_1q26:
-    value: "2,099"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "렘시마SC/집멜트라 매출, 1Q25 대비 +41%"
-  
-  upluimya_1q25:
-    value: "1,175"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q25"
-    confidence: 0.99
-    note: "유플리미야 매출"
-  
-  upluimya_1q26:
-    value: "1,141"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "유플리미야 매출"
-  
-  begjenma_1q25:
-    value: "592"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q25"
-    confidence: 0.99
-    note: "베그젠마 매출"
-  
-  begjenma_1q26:
-    value: "459"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "베그젠마 매출"
-  
-  remsima_1q25:
-    value: "2,377"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q25"
-    confidence: 0.99
-    note: "렘시마(기존 제품) 매출"
-  
-  remsima_1q26:
-    value: "2,136"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "렘시마(기존 제품) 매출"
-  
-  troxima_1q25:
-    value: "1,287"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q25"
-    confidence: 0.99
-    note: "트록시마(기존 제품) 매출"
-  
-  troxima_1q26:
-    value: "1,367"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "트록시마(기존 제품) 매출, 1Q25 대비 +6%"
-  
-  heojungma_1q25:
-    value: "541"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q25"
-    confidence: 0.99
-    note: "허중마(기존 제품) 매출"
-  
-  heojungma_1q26:
-    value: "427"
-    unit: "억원"
-    basis: "연결"
-    period: "1Q26"
-    confidence: 0.99
-    note: "허중마(기존 제품) 매출"
+  historical_bio_revenue:
+    fy2023:
+      value: "19,712"
+      unit: "억원"
+      basis: "연결"
+      period: "FY2023"
+      confidence: 0.95
+      note: "합병 전 (구)셀트리온헬스케어 매출 포함 기준"
+    fy2024:
+      value: "31,085"
+      unit: "억원"
+      basis: "연결"
+      period: "FY2024"
+      confidence: 0.97
+      note: "바이오 제품 연간 매출, 신규 제품 비중 38%"
+    fy2025:
+      value: "38,638"
+      unit: "억원"
+      basis: "연결"
+      period: "FY2025"
+      confidence: 0.97
+      note: "바이오 제품 연간 매출, 신규 제품 비중 54%"
 
 english_summary:
   title: "Celltrion Q1 2026 Earnings Results"
-  one_liner: "Revenue KRW 1.145T (+36% YoY), Operating profit KRW 321.9B (+115.5% YoY), Operating margin expanded to 28.1% from 17.7% YoY"
+  one_liner: "Revenue KRW 1.145T (+36.0% YoY), Operating profit KRW 321.9B (+115.5% YoY), driven by rapid uptake of 5 newly launched biosimilars."
   highlights:
-    - "New bio products (launched 2025+) drove significant growth: revenue of KRW 211.3B (+870% YoY), expanding the new product mix to 60% of total bio revenue"
-    - "Operating margin improved dramatically to 28.1% from 17.7% YoY due to favorable product mix shift towards high-margin products and operational efficiency gains"
-    - "Non-bio product revenue surged 130% YoY to KRW 170.8B, driven by TEVA CMO business launch; temporary US facility maintenance impact during the quarter"
-    - "Stable balance sheet maintained with debt-to-assets ratio of 23.07%, well below the domestic large enterprise average; net debt of KRW 239.3B"
+    - "Total revenue reached KRW 1,145.0B in Q1 2026, up 36.0% YoY (Q1 2025: KRW 841.9B), supported by new product ramp-up and TEVA CMO revenue."
+    - "Bio product revenue grew 26.9% YoY to KRW 974.2B; new-product mix reached 60% of bio revenue (KRW 581.2B, +67% YoY), driven by 5 products launched in 2025."
+    - "Non-bio revenue surged 129.9% YoY to KRW 170.8B, primarily from TEVA CMO manufacturing revenue."
+    - "Operating profit more than doubled to KRW 321.9B (+115.5% YoY); operating margin expanded 10.4pp to 28.1% (vs. 17.7% in Q1 2025)."
+    - "A temporary production loss occurred due to scheduled maintenance at the U.S. Branchburg facility; excluding this, operating margin would have been in the 30%+ range. Normal operations have resumed."
+    - "Balance sheet remains solid: net debt KRW 2,393.2B, debt-to-equity 30.0% — well below the Korean large-cap average of ~61%."
+    - "FY2026 operating profit guidance of KRW 1.8T+, representing 50%+ growth over FY2025 (~KRW 1.2T); Q2–Q4 quarterly targets: KRW 400B+, 500B+, 600B+ respectively."
   key_figures_en:
-    revenue: "KRW 1.145 trillion (consolidated, +36% YoY; -13.9% QoQ)"
-    bio_product_revenue: "KRW 974.2B (+26.9% YoY)"
-    new_bio_product_revenue: "KRW 581.2B (+67% YoY), comprising 60% of total bio product revenue"
-    new_launch_5product_revenue: "KRW 211.3B (+870% YoY)"
-    operating_profit: "KRW 321.9B (+115.5% YoY; -32.3% QoQ)"
-    operating_margin: "28.1% (+10.4%p YoY)"
-    total_assets: "KRW 231.6B (consolidated)"
-    total_equity: "KRW 178.1B (consolidated)"
-    debt_to_assets_ratio: "23.07%"
-  outlook: "Full-year 2026 operating profit expected to reach approximately KRW 1.8 trillion, driven by accelerating new product penetration (targeting 70% revenue mix by end-2026), US facility normalization from Q2 onwards, and continued gross margin improvement through raw material localization and process optimization. Quarterly operating profit expected to be KRW 4.0T+ (2Q26E), KRW 5.0T+ (3Q26E), and KRW 6.0T+ (4Q26E)."
+    revenue: "KRW 1,145.0B consolidated (+36.0% YoY)"
+    bio_product_revenue: "KRW 974.2B (+26.9% YoY); new products 60% mix"
+    non_bio_revenue: "KRW 170.8B (+129.9% YoY)"
+    operating_profit: "KRW 321.9B (+115.5% YoY)"
+    operating_margin: "28.1% (+10.4pp YoY)"
+    total_assets: "KRW 23,156.6B"
+    net_debt: "KRW 2,393.2B"
+    debt_to_equity: "30.0%"
+  outlook: "Celltrion expects FY2026 operating profit to exceed KRW 1.8T (+50% YoY), driven by continued market penetration of 5 new biosimilars, additional launches (Omvloq, Idantell in the U.S., Stelara EU UC indication), ramp-up at the U.S. Branchburg facility, and ongoing cost reduction through raw material localization and process optimization."
 ---
 ```
 
-# 셀트리온 2026년 1분기 실적발표
+# Daring to Go Beyond
 
-**공시일자**: 2026년 5월 6일
+## 셀트리온 2026년 1분기 실적발표
+
+**발표일:** 2026.05.06
+**회계기준:** K-IFRS (연결 기준)
+**주의:** 외부 감사인의 검토가 완료되지 않은 잠정 실적이며, 검토 결과에 따라 수치가 변경될 수 있습니다.
 
 ---
 
-## Disclaimer
+# Disclaimer
 
 본 자료에 기재되어 있는 재무 정보는 한국채택국제회계기준(K-IFRS)에 따라 작성되었습니다.
 
-본 자료는 외부감사인의 회계 검토가 완료되지 않은 상태에서 투자자 및 자산 투자자들의 이해를 돕기 위해 작성된 자료이므로, 그 내용 중 일부는 외부감사인의 검토 결과 등에 따라 변경될 수 있습니다.
+본 자료는 외부감사인의 회계 검토가 완료되지 않은 상태에서 투자자 및 잠재 투자자들의 이해를 돕기 위해 작성된 자료이므로, 그 내용 중 일부는 외부감사인의 검토 결과 등에 따라 변경될 수 있습니다.
 
-본 자료에 기재된 현재 당사의 경영 상황, 시장환경, 향후 전망 및 계획 등에는 '예측정보'가 포함되어 있으며, 이러한 '예측정보'는 경영 환경의 변화 및 당사의 경영 계획에 따라 변경될 수 있음을 주의바랍니다.
+본 자료에 기재된 현재 당사의 경영 상황, 시장환경, 향후 전망 및 계획 등에는 '예측정보'가 포함되어 있으며, 이러한 '예측정보'는 미래 경영 환경의 변화 및 당사의 중장기 경영 계획에 따라 변경될 수 있음을 주의바랍니다.
 
 또한 본 자료는 투자를 권유하는 자료가 아니며, 투자에 대한 판단은 전적으로 투자자 개인의 책임하에 있다는 점을 명시합니다.
 
@@ -485,56 +242,181 @@ english_summary:
 
 # 01. 2026년 1분기 경영실적
 
-## 2026년 1분기 실적 개요
+---
 
-최근 출시한 신규 제품 5종의 빠른 시장 침투 속 고수익의 신규 제품 성장 등으로 **전년 동기 대비 매출 36% 성장 및 이익 2배 이상 증가**를 달성했습니다.
+## 2026년 1분기 실적 요약
 
-### 분기별 주요 재무 지표 (연결 기준, 단위: 억원)
+> 최근 출시한 신규 제품 5종의 빠른 시장 침투 및 고수익 신규 제품 성장 등으로 전년 동기 대비 **매출 36% 성장** 및 **영업이익 2배 이상 증가**
+
+<!-- 단위: 억원 (연결 기준, K-IFRS, 잠정치) -->
+<!-- 영업이익률은 영업이익/매출액으로 산출: 1Q26 = 3,219/11,450 = 28.1% (일치), 1Q25 = 1,494/8,419 = 17.7% (일치) -->
 
 | 구분 | 1Q26 | 4Q25 | QoQ | 1Q25 | YoY |
-|------|------|------|-----|------|-----|
-| **매출액** | **11,450** | 13,302 | -13.9% | 8,419 | **+36.0%** |
-| 바이오 제품 | 9,742 | 12,523 | -22.2% | 7,676 | +26.9% |
-| Non-바이오 제품 | 1,708 | 779 | +119.3% | 743 | +129.9% |
-| **영업이익** | **3,219** | 4,752 | -32.3% | 1,494 | **+115.5%** |
-| **영업이익율** | **28.1%** | 35.7% | -7.6%p | 17.7% | **+10.4%p** |
+|---|---|---|---|---|---|
+| **매출액** (억원) | **11,450** | **13,302** | -13.9% | **8,419** | **+36.0%** |
+| · 바이오 제품 (억원) | 9,742 | 12,523 | -22.2% | 7,676 | +26.9% |
+| · Non-바이오 제품 (억원) | 1,708 | 779 | +119.3% | 743 | +129.9% |
+| **영업이익** (억원) | **3,219** | **4,752** | -32.3% | **1,494** | **+115.5%** |
+| **영업이익률** | **28.1%** | 35.7% | -7.6%p | 17.7% | +10.4%p |
 
-**주석**:
-- 매출액: 연결 기준 / QoQ 감소는 4Q25의 높은 기저 및 미국 공장 정기보수에 따른 일시적 영향 포함
-- 영업이익: 미국 공장 정기보수로 인한 일시적 조업도손 포함
-- 영업이익율: 1Q25의 17.7%에서 1Q26 28.1%로 상향 — 고수익 제품 믹스 개선이 주요 원인
+> **[수치 간 관계 주석]**
+> - 바이오 + Non-바이오 = 9,742 + 1,708 = **11,450억원** (매출액 합계 일치)
+> - Non-바이오 매출 급증(+119.3% QoQ, +129.9% YoY)의 주요 요인: **TEVA CMO 매출 발생**
+> - 영업이익 QoQ 감소(-32.3%)는 **미국 브랜치버그(Branchburg) 공장 정기 보수로 인한 일시적 조업도 손실** 영향; 해당 손실 제외 시 영업이익률 30%대 수준
 
----
+### 매출 전년 동기 대비 +36.0% 증가 요인
 
-## 매출 분석
+- **고수익 바이오 신규 제품** 매출이 YoY +67% 성장하여 매출 성장 견인 (2025년 출시 5개 제품 포함)
+- **Non-바이오 매출**: TEVA CMO 매출 발생으로 YoY +130% 증가
 
-### 전년 동기 대비 매출 +36.0% 성장
+### 영업이익 전년 동기 대비 +115.5% 증가 요인
 
-**Stage 4 교정 완료**: 
-- debt_to_assets_ratio 값 수정: 30.0% → 23.07% (계산값으로 교정)
-- net_debt 주석 정확화: 계산 검증 완료 (38,095 - 14,163 = 23,932)
-- bio_revenue_fy26_forecast: 원본 확인 필요 표시 및 N/A로 처리 (FY25와 동일값 오류)
-- operating_profit_adjusted 신뢰도 낮음 표시 (confidence 0.85)
-- markdown_truncation: 문서 본문이 '매출 분석' 섹션에서 미완성 상태
-
-(⚠️ **원본 자료 확인 필요**: 마크다운 원문이 '매출 분석' 섹션 중간에서 끝나 있습니다. 전체 본문 발췌를 요청합니다.)
-```
+- 전년 동기 대비 영업 레버리지 해소 및 고수익 제품 중심 믹스 개선 → 이익률 17.7% → 28.1%로 대폭 개선
+- **일시적 비용 요인**: 미국 브랜치버그 공장 정기 보수에 따른 일시적 조업도 손실 발생. 해당 영향 제외 시 30%대의 건조한 마진 기록. **현재 미국 공장은 정상 가동 중으로, 2분기부터 관련 영향 없음**
+- **향후 수익성 전망**: 신규 출시 제품 5종의 시장 침투 확대 및 출시 국가 확대에 따른 고수익 제품 비중 확대; 원부자재 국산화 및 공정 최적화를 통한 제조원가 절감으로 추가 마진 개선 추진
 
 ---
 
-## 수정 사항 요약 (Stage 4 교정)
+## 바이오 제품 글로벌 매출 추이
 
-| 항목 | 수정 전 | 수정 후 | 사유 |
-|------|--------|--------|------|
-| **debt_to_assets_ratio** | 30.0% | 23.07% | 산술 검증: 53,423÷231,566×100% = 23.07% |
-| **net_debt note** | "24,534억원" | "검증 완료 23,932억원" | 주석 오류 정정 및 계산 명확화 |
-| **bio_revenue_fy26_forecast** | 38,638억원 | N/A | 데이터 이상 처리: FY25와 동일값 오류 |
-| **operating_profit_adjusted confidence** | 0.85 | 0.85 | ⚠️ 표시 추가 (원본 확인 필요) |
-| **markdown 본문** | (미완성) | (표기) | ⚠️ 문서 완성도 문제 표기 |
+<!-- 단위: 억원 (연결 기준) -->
+<!-- 신규 제품: 렉시마SC, 유플리마, 베그제마, 짐펠트라, 스텔라라, 스토보클로스/스센트라, 엔도조마, 옴리클로, 아이덴텔 등 2020~2025년 이후 출시 제품 -->
+<!-- 기존 제품: 렉시마(IV), 트록시마, 혜유마 등 2020년 이전 출시 제품 -->
+
+### 분기별 바이오 제품 매출 (단위: 억원)
+
+| 구분 | 1Q24 | 1Q25 | 1Q26 |
+|---|---|---|---|
+| **바이오 제품 합계** | **6,512** | **7,676** | **9,742** |
+| · 신규 제품 (억원) | 2,140 (33%) | 3,472 (45%) | **5,812 (60%)** |
+| · 기존 제품 (억원) | 4,372 (67%) | 4,204 (55%) | 3,930 (40%) |
+| YoY 성장률 | — | +17.9% | **+26.9%** |
+
+> **신규 제품 YoY:** 1Q25→1Q26: 3,472 → 5,812 = **+67.4%** (표기상 +67%)
+> 신규 제품 비중: 33% → 45% → **60%** 로 지속 확대 중
+> 2026년 연간 신규 제품 비중 **약 70%** 수준으로 확대 전망
+
+### 연간 바이오 제품 매출 추이 (단위: 억원)
+
+| 구분 | 2023 | 2024 | 2025 | 2026(E) |
+|---|---|---|---|---|
+| **바이오 제품 합계** | **19,712** | **31,085** | **38,638** | — |
+| · 신규 제품 비중 | 26% | 38% | 54% | **~70%** |
+| · 기존 제품 비중 | 74% | 62% | 46% | **~30%** |
+
+> **주석:** 2023년 바이오 매출은 합병 전 (구)셀트리온헬스케어 매출 포함 기준
+> 2026(E) 총액은 별도 명시되지 않음 [원본 확인 필요]
 
 ---
 
-**검수 결과**: 4개 항목 교정 완료, 누락 필드 없음
+## 바이오 제품별 매출 상세
+
+<!-- 단위: 억원 (연결 기준, 1Q25 vs 1Q26 비교) -->
+
+고수익 신규 제품이 전년 동기 대비 **+2,340억원** 증가하며 성장 견인.
+특히, 2025년 대부분 하반기에 출시된 5개 제품의 판매 본격화로 합산 매출 **2,113억원** 기록.
+짐펠트라는 보험 커버리지 확대 및 처방 증가로 매출 약 **4배 성장**.
+
+### 고수익 신규 제품군 ▲ +2,340억원
+
+<!-- 신규 출시 5종(2025년 이후): 스텔라라, 스토보클로스/스센트라, 엔도조마, 유플리마(추정), 아이덴텔 -->
+<!-- 신규 제품(2020~2024년): 램시마SC/짐센트라, 유플리마, 베그제마 포함 -->
+
+| 제품군/제품 | 1Q25 (억원) | 1Q26 (억원) | YoY |
+|---|---|---|---|
+| **신규 출시 5종 합산** (2025년 출시) | ~243 (추정) | **2,113** | **+769%** (원문: +869%로 표기) |
+| **램시마SC / 짐센트라** | 1,487 | **2,099** | **+41%** |
+| **유플리마** | 1,141 | **1,175** | +3% |
+| **베그제마** | 459 | **592** | +29% |
+
+> **[원본 확인 필요]** 표의 YoY +869%와 +67% 간 수치 맥락: +869%는 신규 출시 5종만의 개별 성장률, +67%는 전체 신규 제품군(2020~2025년 출시) 합산 성장률
+> 유플리마: 유럽 M/S 1위, 미국 Low-WAC 지원 확대
+> 베그제마: 유럽 M/S 1위, 미국 M/S 공동 3위
+
+### 기존 제품군 ▼ -274억원
+
+<!-- 기존 제품(2020년 이전 출시): 렉시마(IV), 트록시마, 혜유마 -->
+<!-- 전분기 출하량 감소에 따른 고객사의 공급 물량 조절 및 고수익 제품 중심 선별적 입찰 참여 영향으로 소폭 감소 -->
+
+| 제품 | 1Q25 (억원) | 1Q26 (억원) | YoY |
+|---|---|---|---|
+| **렉시마** | 2,377 | **2,136** | -10.1% |
+| **트록시마** | 1,287 | **1,367** | **+6.2%** |
+| **혜유마** | 541 | **427** | -21.1% |
+| **기존 제품 합계** | **4,205** | **3,930** | **-6.5%** |
+
+> **[수치 간 관계 주석]** 기존 제품 합계: 2,377+1,287+541 = 4,205억 (1Q25) → 2,136+1,367+427 = 3,930억 (1Q26), 차이 = -275억원 (원문 표기 -274억원과 1억원 오차, 반올림 영향)
+> 렉시마 액상 제형 EU 출시 예정, 트록시마 미국 내 장기 공급계약 유지로 안정적 매출 전망
+> 수익성 관리 기조 속 선별적 입찰 참여로 매출 소폭 감소했으나 점유율은 성장
+
+---
+
+## 분기별 영업이익 전망
+
+> 안정적 원가구조 가운데, 고수익 신규 제품 확대 등으로 분기별 영업이익 지속 증가 전망
+
+<!-- 단위: 억원 (연결 기준) -->
+
+| 구분 | 1Q25 | 2Q25 | 3Q25 | 4Q25 | 1Q26 | 2Q26(P) | 3Q26(P) | 4Q26(P) |
+|---|---|---|---|---|---|---|---|---|
+| **영업이익** (억원) | **1,494** | **2,425** | **3,014** | **4,752** | **3,219** *(주1)* | **4,000 이상** | **5,000 이상** | **6,000 이상** |
+
+> *(주1) 1Q26 영업이익 3,219억원은 미국 브랜치버그 공장 정기 보수로 인한 가동 중단으로 일시적인 조업도 손실이 포함된 수치. 해당 손실 제외 시 영업이익은 30%대 마진에 해당*
+
+> **연간 영업이익 추정:**
+> - FY2025 실적 합계: 1,494 + 2,425 + 3,014 + 4,752 = **11,685억원 (약 1.2조원)**
+> - FY2026 가이던스: **1.8조원 이상** (YoY +50% 이상 성장)
+> - 2Q26~4Q26(P) 합산 가이던스: 4,000 + 5,000 + 6,000 = **15,000억원 이상**
+
+### 영업이익 개선 3대 핵심 요인
+
+**① 고수익 신규 제품 매출 성장 모멘텀**
+- 출시 1년 미만 신제품의 본격적인 성장 기대
+- 하반기 추가 성장 모멘텀:
+  - 스텔라라 유럽 UC(궤양성 대장염) 적응증 추가
+  - 옴리클로(Omvloq), 아이덴텔(Idantell) 미국 출시
+  - 짐펠트라 성장 본격화
+
+**② 하반기 외형 성장을 통한 고정비 레버리지 효과 확대**
+- 매출 확대에 따른 규모의 경제 실현으로 판관비 효율화 및 수익성 제고
+
+**③ 미국 브랜치버그(Branchburg) 공장 정상 가동 재개**
+- 정기 보수 완료
+- 2분기부터 CMO 생산 및 자사 제품 밸리데이션(Validation) 진행
+
+---
+
+## 재무상태표 (연결 기준)
+
+> 현금성자산 증가하며 순차입금 소폭 감소. 부채비율은 여전히 국내 대기업 평균 대비 크게 낮은 **30%** 수준으로 안정적 재무 구조 유지
+
+<!-- 단위: 억원 (연결 기준, K-IFRS) -->
+<!-- 2025년말 수치는 감사 완료 수치, 1Q26 수치는 잠정치 -->
+
+### 요약 재무상태표
+
+| 구분 | 2025년말 (억원) | 1Q26 (억원) | 증감 (억원) |
+|---|---|---|---|
+| **자산총계** | **223,349** | **231,566** | +8,217 |
+| 유동자산 | 62,053 | 66,928 | +4,875 |
+| · 현금성자산 *(주1)* | 12,367 | 14,163 | +1,796 |
+| · 매출채권 | 17,904 | 19,096 | +1,192 |
+| · 재고자산 *(주2)* | 28,035 | 28,636 | +601 |
+| 비유동자산 | 161,296 | 164,638 | +3,342 |
+| · 무형자산 *(주3)* | 137,783 | 140,284 | +2,501 |
+| **부채총계** | **49,824** | **53,423** | +3,599 |
+| 유동부채 | 44,538 | 48,165 | +3,627 |
+| 비유동부채 | 5,286 | 5,258 | -28 |
+| ※ 장단기차입금 합계 | 36,901 | 38,095 | +1,194 |
+| **자본총계** | **173,525** | **178,144** | +4,619 |
+| · 자본금 | 2,394 | 2,394 | 0 |
+| · 주식발행초과금 | 141,901 | 142,045 | +144 |
+| · 이익잉여금 | 44,071 | 45,893 | +1,822 |
+| · 기타포괄손익누계액 | 3,096 | 5,649 | +2,553 |
+| · 기타자본항목 | (19,376) | (19,274) | +102 |
+
+> *(주1) 현금성자산: 현금 및 현금성자산 + 단기금융상품 합산*
+> *(주2) 원문 '제조공자'는 재고자산(제품/재공품 등)으로
 ---
 
 > **⚠️ 본 문서 이용 시 유의사항**
