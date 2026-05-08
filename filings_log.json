@@ -2944,5 +2944,141 @@
         "cost": 0.1452
       }
     ]
+  },
+  {
+    "date": "2026-05-09",
+    "time": "2026-05-09T06:43:50.161396",
+    "total": 18,
+    "success": 18,
+    "failed": 0,
+    "cost": 1.7891,
+    "files": [
+      {
+        "company": "APR",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.0827
+      },
+      {
+        "company": "HD현대일렉트릭",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.0773
+      },
+      {
+        "company": "ISC",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.1058
+      },
+      {
+        "company": "KB금융",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.1145
+      },
+      {
+        "company": "LG에너지솔루션",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.0702
+      },
+      {
+        "company": "Naver",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.1185
+      },
+      {
+        "company": "SK하이닉스",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.0578
+      },
+      {
+        "company": "POSCO홀딩스",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.1245
+      },
+      {
+        "company": "두산에너빌리티",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.1148
+      },
+      {
+        "company": "삼성전자",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.1173
+      },
+      {
+        "company": "원익IPS",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.0815
+      },
+      {
+        "company": "셀트리온",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.1171
+      },
+      {
+        "company": "파크시스템스",
+        "doc_type": "실적발표",
+        "period": "2025-4Q",
+        "status": "ok",
+        "cost": 0.0742
+      },
+      {
+        "company": "카카오",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.115
+      },
+      {
+        "company": "한화에어로스페이스",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.0654
+      },
+      {
+        "company": "한화오션",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.1191
+      },
+      {
+        "company": "현대로템",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.1239
+      },
+      {
+        "company": "현대자동차",
+        "doc_type": "실적발표",
+        "period": "2026-1Q",
+        "status": "ok",
+        "cost": 0.1093
+      }
+    ]
   }
 ]
