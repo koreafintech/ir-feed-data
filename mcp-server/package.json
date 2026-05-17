@@ -1,6 +1,6 @@
 {
   "name": "irfeed-mcp",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "MCP server for Korean listed company IR filings — access DART earnings, financials, and disclosures from Claude Desktop",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

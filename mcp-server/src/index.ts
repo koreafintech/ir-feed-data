@@ -31,6 +31,24 @@ import {
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
 import { z } from "zod";
 
+// ─── EPIPE 핸들러 (v0.1.6 추가, 2026-05-12) ────────────────────────────────
+// Claude Desktop이 stdio 파이프를 먼저 닫은 뒤 서버가 응답 write를 시도할 때
+// EPIPE/ERR_STREAM_DESTROYED가 uncaughtException으로 떠서 프로세스가 죽는 이슈
+// (4/17, 4/30 로그 확인). 클라이언트 정상 종료 신호로 간주하고 조용히 무시.
+// 그 외 예외는 기존 동작대로 throw하여 가시성 유지.
+process.on("uncaughtException", (err: any) => {
+  if (err && (err.code === "EPIPE" || err.code === "ERR_STREAM_DESTROYED")) {
+    return;
+  }
+  throw err;
+});
+process.stdout.on("error", (err: any) => {
+  if (err && err.code !== "EPIPE") throw err;
+});
+process.stderr.on("error", (err: any) => {
+  if (err && err.code !== "EPIPE") throw err;
+});
+
 // ─── 환경변수 ────────────────────────────────────────────────────────────────
 const SUPABASE_URL = process.env.IRFEED_SUPABASE_URL;
 // anon key 우선 사용 (RLS 적용, 읽기 전용), service key는 폴백
@@ -652,7 +670,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("[IRFeed MCP] 서버 v0.1.5 시작됨 (stdio transport)");
+  console.error("[IRFeed MCP] 서버 v0.1.6 시작됨 (stdio transport)");
 }
 
 main().catch((err) => {
