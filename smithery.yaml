@@ -1,73 +1,104 @@
-# smithery.yaml — Smithery (smithery.ai) 자동 인덱싱 메타데이터
-# Spec: https://smithery.ai/docs/config
-# Repo: https://github.com/koreafintech/ir-feed
-# npm:  irfeed-mcp (v0.1.5)
-#
-# 이 repo의 mcp 서버 source는 mcp-server/ 폴더에 있다.
-# Smithery 표준은 repo 루트의 yaml을 본다 — 이 파일이 그 역할.
+# Smithery server manifest — IRGO Feed
+# Repo path: smithery.yaml (root) + mcp-server/smithery.yaml (subfolder safety copy)
+# Updated: 2026-05-09 (5/9 PM5) — aligned with current direction
+# - AI-Ready / multi-MCP-client / IBKR 1H26 / Free 10 forever
+# - Tools 4 with trigger-keyword descriptions (5/9 standard)
+# - Tiered Free pricing (PM5): discovery free + data delivery $0.0001/call (100 free per account)
+
+version: 1
 
 runtime: node
 
+build:
+  dockerfile: |
+    FROM node:20-alpine
+    WORKDIR /app
+    RUN npm install -g irfeed-mcp@latest
+    ENTRYPOINT ["npx", "-y", "irfeed-mcp"]
+
 startCommand:
   type: stdio
-  command: npx
-  args:
-    - "-y"
-    - "irfeed-mcp"
+  configSchema:
+    type: object
+    properties:
+      IRFEED_SUPABASE_URL:
+        type: string
+        description: "Supabase project URL — get yours free at https://irfeed.dev"
+      IRFEED_SUPABASE_ANON_KEY:
+        type: string
+        description: "Supabase anon key (read-only, RLS enforced) — get yours free at https://irfeed.dev"
+    required:
+      - IRFEED_SUPABASE_URL
+      - IRFEED_SUPABASE_ANON_KEY
+  commandFunction: |-
+    (config) => ({
+      command: "npx",
+      args: ["-y", "irfeed-mcp"],
+      env: {
+        IRFEED_SUPABASE_URL: config.IRFEED_SUPABASE_URL,
+        IRFEED_SUPABASE_ANON_KEY: config.IRFEED_SUPABASE_ANON_KEY
+      }
+    })
 
-configSchema:
-  type: object
-  required:
-    - IRFEED_SUPABASE_URL
-    - IRFEED_SUPABASE_ANON_KEY
-  properties:
-    IRFEED_SUPABASE_URL:
-      type: string
-      description: Supabase project URL (e.g. https://YOUR-PROJECT.supabase.co)
-    IRFEED_SUPABASE_ANON_KEY:
-      type: string
-      description: Read-only anon key (RLS enforced). Sign up at https://irfeed.dev for a free key.
+# Server metadata (Smithery card display)
+name: irfeed
+displayName: "IRGO Feed — Korean IR for AI"
+description: "AI-Ready Korean public company IR data — 4 baseline read-only tools. Free for top 10 Korean stocks forever, search and discovery always free, $0.0001/call for data delivery (first 100 calls free per account). Built for IBKR users entering Korea in 1H 2026."
 
-name: IRFeed
-displayName: IRFeed MCP
-description: >-
-  Korean listed company IR filings and DART financial data — 335 filings from
-  120 KOSPI/KOSDAQ companies (Samsung, SK Hynix, Hyundai, LG, Naver, Kakao,
-  etc.) with English summaries. Read-only access via 4 tools.
 homepage: https://irfeed.dev
 repository: https://github.com/koreafintech/ir-feed
 license: MIT
-author: KoreaFintech (IRFeed)
+icon: https://irfeed.dev/icon-512.png
 
 categories:
-  - financial-data
-  - stock-market
+  - finance
+  - data
+  - korea
 
 tags:
+  - finance
+  - korea
   - korean-stocks
-  - dart
-  - ir
-  - earnings
-  - financials
   - kospi
   - kosdaq
-  - korea
-  - claude-desktop
+  - ir
+  - investor-relations
+  - earnings
+  - quarterly-earnings
+  - ipo
+  - dart
+  - krx
+  - samsung
+  - sk-hynix
+  - data
+  - structured-data
+  - ai-ready
+  - mcp
+  - anthropic
+  - openai
 
+# Tools — Smithery may auto-extract from server-card.json; this is a safety copy.
 tools:
-  - name: list_filings
-    description: List IR filings with filters (company, date, type)
-    readOnly: true
-    idempotent: true
-  - name: get_filing
-    description: Get full details of a specific filing by ID
-    readOnly: true
-    idempotent: true
   - name: search_filings
-    description: Search filings by keyword across all companies
-    readOnly: true
-    idempotent: true
+    description: "Search Korean company IR filings (quarterly earnings, IPO IR books, NDR decks) by company ticker, fiscal period, or filing type. Use this when a user asks about Korean stock earnings or IR materials. Examples: Samsung 1Q26, SK Hynix earnings, KOSPI quarterly results."
+    annotations:
+      readOnlyHint: true
+      idempotentHint: true
+
+  - name: list_filings
+    description: "List recent Korean IR filings sorted by date. Use for 'what's new' queries or to discover the most recently published filings across KOSPI/KOSDAQ."
+    annotations:
+      readOnlyHint: true
+      idempotentHint: true
+
+  - name: get_filing
+    description: "Retrieve the full structured content of a specific filing — Markdown body, KPI YAML, and financials JSON. Returns content with fidelity score and source PDF reference for citation."
+    annotations:
+      readOnlyHint: true
+      idempotentHint: true
+
   - name: get_key_figures
-    description: Query DART consolidated financial metrics (revenue, operating profit, net income, margins, debt ratio)
-    readOnly: true
-    idempotent: true
+    description: "Get normalized financial KPI for a Korean company filing — revenue, operating profit, net income, EPS, and forward guidance. Returns standards-aligned numbers reconciled with DART (Korea's official disclosure system)."
+    annotations:
+      readOnlyHint: true
+      idempotentHint: true

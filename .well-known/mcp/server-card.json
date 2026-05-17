@@ -1,0 +1,316 @@
+{
+  "schemaVersion": "1.0",
+  "name": "irfeed",
+  "displayName": "IRGO Feed — Korean IR for AI",
+  "description": "AI-Ready Korean public company IR data — 4 baseline read-only tools. Free for top 10 Korean stocks forever. Search and discovery (search_filings, list_filings) always free. Data delivery (get_filing, get_key_figures) priced at $0.0001/call with first 100 calls free per account. Empty results, 4xx, 5xx never billed. Built for IBKR users entering Korea in 1H 2026.",
+  "version": "0.2.0",
+  "homepage": "https://irfeed.dev",
+  "repository": "https://github.com/koreafintech/ir-feed",
+  "license": "MIT",
+  "author": {
+    "name": "AnyNble Inc. (IRGO Feed)",
+    "email": "contact@irfeed.dev",
+    "url": "https://irfeed.dev"
+  },
+  "icon": "https://irfeed.dev/icon-512.png",
+  "categories": ["finance", "data", "korea", "investing"],
+  "tags": [
+    "finance",
+    "korea",
+    "korean-stocks",
+    "kospi",
+    "kosdaq",
+    "ir",
+    "investor-relations",
+    "earnings",
+    "quarterly-earnings",
+    "ipo",
+    "dart",
+    "krx",
+    "samsung",
+    "sk-hynix",
+    "data",
+    "structured-data",
+    "ai-ready",
+    "mcp",
+    "anthropic",
+    "openai"
+  ],
+  "languages": ["ko-KR", "en-US"],
+  "serverInfo": {
+    "transport": "stdio",
+    "command": "npx",
+    "args": ["-y", "irfeed-mcp"],
+    "env": {
+      "IRFEED_SUPABASE_URL": {
+        "description": "Supabase project URL — get yours free at https://irfeed.dev",
+        "required": true,
+        "example": "https://xxx.supabase.co"
+      },
+      "IRFEED_SUPABASE_ANON_KEY": {
+        "description": "Supabase anon key (read-only, RLS enforced) — get yours free at https://irfeed.dev",
+        "required": true,
+        "example": "eyJxxx..."
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "search_filings",
+      "description": "Search Korean company IR filings (quarterly earnings, IPO IR books, NDR decks) by company ticker, fiscal period, or filing type. Use this when a user asks about Korean stock earnings or IR materials. Examples: Samsung 1Q26, SK Hynix earnings, KOSPI quarterly results.",
+      "annotations": {
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "destructiveHint": false
+      },
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search query — can be a Korean company name (삼성전자 / Samsung), ticker (005930), keyword (반도체 capex), or fiscal period (1Q26)."
+          },
+          "ticker": {
+            "type": "string",
+            "description": "6-digit Korean ticker code (e.g., 005930 for Samsung Electronics, 000660 for SK Hynix)",
+            "pattern": "^[0-9]{6}$"
+          },
+          "period": {
+            "type": "string",
+            "description": "Fiscal period — formats: '1q26' (Q1 2026), '4q25' (Q4 2025), '2025' (annual). Lowercase only."
+          },
+          "filing_type": {
+            "type": "string",
+            "enum": ["earnings", "ipo", "ndr", "strategy", "product", "ir_book"],
+            "description": "Filing type filter — earnings = quarterly/annual results, ipo = IPO IR Book, ndr = Non-Deal Roadshow, strategy = corporate strategy/vision, product = product/tech briefing, ir_book = general IR book."
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 50,
+            "default": 10,
+            "description": "Maximum number of filings to return (default 10, max 50)"
+          }
+        }
+      }
+    },
+    {
+      "name": "list_filings",
+      "description": "List recent Korean IR filings sorted by date. Use for 'what's new' queries or to discover the most recently published filings across KOSPI/KOSDAQ. Default returns the last 10 filings.",
+      "annotations": {
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "destructiveHint": false
+      },
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "from_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Start date (ISO 8601, e.g., '2026-04-01'). Default: 7 days ago."
+          },
+          "to_date": {
+            "type": "string",
+            "format": "date",
+            "description": "End date (ISO 8601). Default: today."
+          },
+          "filing_type": {
+            "type": "string",
+            "enum": ["earnings", "ipo", "ndr", "strategy", "product", "ir_book"],
+            "description": "Optional filing type filter."
+          },
+          "limit": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 50,
+            "default": 10
+          }
+        }
+      }
+    },
+    {
+      "name": "get_filing",
+      "description": "Retrieve the full structured content of a specific Korean IR filing — Markdown body, KPI YAML, and financials JSON. Returns content with fidelity score (0-100) and source PDF reference for citation. Use when the user wants details of a specific filing already identified by ticker + period (or filing_id).",
+      "annotations": {
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "destructiveHint": false
+      },
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "filing_id": {
+            "type": "string",
+            "description": "Filing ID (e.g., '20260425_005930_earnings_1q26'). Either filing_id OR (ticker + period) is required."
+          },
+          "ticker": {
+            "type": "string",
+            "description": "6-digit Korean ticker. Required if filing_id not provided.",
+            "pattern": "^[0-9]{6}$"
+          },
+          "period": {
+            "type": "string",
+            "description": "Fiscal period (e.g., '1q26'). Required if filing_id not provided."
+          },
+          "format": {
+            "type": "string",
+            "enum": ["markdown", "json", "yaml", "all"],
+            "default": "all",
+            "description": "Output format — 'all' returns Markdown body + KPI YAML + financials JSON together."
+          }
+        }
+      }
+    },
+    {
+      "name": "get_key_figures",
+      "description": "Get normalized financial KPI for a Korean company filing — revenue, operating profit, net income, EPS, and forward guidance. Returns standards-aligned numbers reconciled with DART (Korea's official disclosure system). Each figure includes unit (억원/원), YoY/QoQ deltas, and consolidation flag (consolidated vs standalone).",
+      "annotations": {
+        "readOnlyHint": true,
+        "idempotentHint": true,
+        "destructiveHint": false
+      },
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "ticker": {
+            "type": "string",
+            "description": "6-digit Korean ticker code",
+            "pattern": "^[0-9]{6}$"
+          },
+          "period": {
+            "type": "string",
+            "description": "Fiscal period (e.g., '1q26', '4q25', '2025')"
+          },
+          "metrics": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["revenue", "operating_profit", "net_income", "eps", "guidance", "all"]
+            },
+            "default": ["all"],
+            "description": "Which KPI to return. Default returns all available metrics."
+          }
+        },
+        "required": ["ticker", "period"]
+      }
+    }
+  ],
+  "examples": [
+    {
+      "title": "Quarterly earnings research",
+      "prompt": "How did Samsung Electronics perform in 1Q26?",
+      "tools": ["search_filings", "get_key_figures"]
+    },
+    {
+      "title": "Cross-company comparison",
+      "prompt": "Compare SK Hynix and Samsung memory revenue Q1 2026",
+      "tools": ["get_key_figures"]
+    },
+    {
+      "title": "Industry keyword search",
+      "prompt": "Search Korean filings for 'semiconductor capex'",
+      "tools": ["search_filings"]
+    },
+    {
+      "title": "Recent filings discovery",
+      "prompt": "What new Korean earnings have been published this week?",
+      "tools": ["list_filings"]
+    }
+  ],
+  "pricing": {
+    "model": "tiered-free-with-trust-tier",
+    "currency": "USD",
+    "billingTrigger": "http_200_with_non_empty_payload",
+    "tiers": [
+      {
+        "name": "Free 10",
+        "description": "Top 10 Korean stocks by foreign investor demand — all 4 tools free forever for all callers",
+        "price": "0",
+        "unit": "per_call",
+        "coverage": ["005930", "000660", "005380", "373220", "207940", "035420", "035720", "068270", "005490", "105560"]
+      },
+      {
+        "name": "Discovery",
+        "description": "search_filings + list_filings always free for all callers and all tickers — coverage discovery is never metered",
+        "price": "0",
+        "unit": "per_call",
+        "tools": ["search_filings", "list_filings"]
+      },
+      {
+        "name": "Trust Tier",
+        "description": "Data delivery for the rest of KOSPI/KOSDAQ — first 100 calls free per account, then $0.0001 per call. Empty results, 4xx, 5xx never billed.",
+        "price": "0.0001",
+        "unit": "per_call",
+        "tools": ["get_filing", "get_key_figures"],
+        "trial": "100_calls_free_per_account"
+      },
+      {
+        "name": "Pro",
+        "description": "All stocks + real-time signals + alerts + monitoring (W22+ launch, Phase 3)",
+        "price": "19~49",
+        "unit": "per_month",
+        "status": "coming_soon"
+      },
+      {
+        "name": "Enterprise",
+        "description": "All + SLA + custom skills + dedicated instance",
+        "price": "custom",
+        "unit": "annual_contract",
+        "status": "by_request"
+      }
+    ],
+    "paymentRails": ["pay.sh", "coinbase_x402", "stripe"],
+    "freeApiKey": "https://irfeed.dev — 60 sec sign-up",
+    "rationale": "Tiered free with trust-tier data pricing. Discovery (search/list) is unlimited free because coverage exploration should never carry friction. Data delivery (get_filing/get_key_figures) is priced at $0.0001/call to fund recurring conversion + sit in the agent payment economy. Per-call serving cost ~$0.00005 (Supabase query + bandwidth, no inference). 100 free data calls per account allows evaluation of ~50 KOSPI/KOSDAQ companies' quarterly data before payment kicks in."
+  },
+  "freeTier": {
+    "policy": "Tiered free — Free 10 forever + Discovery unlimited + 100 data calls per account",
+    "tickers": [
+      "005930",
+      "000660",
+      "005380",
+      "373220",
+      "207940",
+      "035420",
+      "035720",
+      "068270",
+      "005490",
+      "105560"
+    ],
+    "discoveryTools": ["search_filings", "list_filings"],
+    "additionalQuota": "100 data delivery calls (get_filing + get_key_figures) free per account for the rest of KOSPI/KOSDAQ, then Trust Tier $0.0001/call. Empty results, 4xx, 5xx never billed."
+  },
+  "hybridModel": {
+    "baseline": {
+      "tools": ["search_filings", "list_filings", "get_filing", "get_key_figures"],
+      "stability": "Locked. Breaking change → major version (2.0+) only, with 12-month deprecation.",
+      "sla": "Read-only, idempotent. P95 latency < 500ms target. 99.5% uptime."
+    },
+    "evolutionLayer": {
+      "description": "Log-driven expansion above baseline — coverage, skills, high-level tools, Pro features",
+      "promotionSignals": [
+        "Coverage gap (repeated empty results for ticker × period) → batch priority",
+        "Repeated query intent (LLM-classified) → new skill spec",
+        "Tool composition pattern (4-tool sequence repeated) → high-level tool candidate",
+        "High retention pattern (D30 retention > 30%) → Pro tier package"
+      ]
+    }
+  },
+  "privacy": {
+    "policyUrl": "https://irfeed.dev/privacy",
+    "termsUrl": "https://irfeed.dev/terms",
+    "dataRetentionDays": 90,
+    "piiScrubbing": true,
+    "gdprCompliant": true,
+    "telemetryOptOut": "Set IRFEED_TELEMETRY=off in env to disable anonymous telemetry"
+  },
+  "links": {
+    "homepage": "https://irfeed.dev",
+    "documentation": "https://irfeed.dev/docs",
+    "github": "https://github.com/koreafintech/ir-feed",
+    "npm": "https://www.npmjs.com/package/irfeed-mcp",
+    "twitter": "https://x.com/IRFeed_dev",
+    "issues": "https://github.com/koreafintech/ir-feed/issues"
+  }
+}
